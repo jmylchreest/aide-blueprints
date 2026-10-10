@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "name": "jmylchreest-writing",
+  "display_name": "John Mylchreest writing preferences",
+  "description": "Personal preferences for clear, natural and succinct technical writing.",
+  "version": "0.1.0",
+  "tags": [
+    "personal",
+    "writing",
+    "documentation"
+  ],
+  "decisions": [
+    {
+      "topic": "jmylchreest-writing-tone",
+      "decision": "Write in a natural, direct tone using familiar words and concrete statements.",
+      "rationale": "Technical writing is easier to trust and understand when it sounds like a person explaining the work to a colleague.",
+      "details": "Apply these preferences to READMEs, documentation, commit messages, pull request descriptions, release notes, code comments and user-facing explanations. Lead with the useful point and explain what changed or why it matters. Avoid hype, canned introductions, rhetorical questions, inflated claims and stock phrases such as \"delve into\", \"leverage\" and \"it is worth noting\". Use technical terms when they improve precision."
+    },
+    {
+      "topic": "jmylchreest-writing-sentences",
+      "decision": "Use complete, connected sentences and avoid em dashes in authored prose.",
+      "rationale": "Complete sentences make relationships between ideas clear without forcing the reader to reconstruct the meaning.",
+      "details": "Do not use em dashes, clipped sentence fragments or artificial question-and-answer constructions. Use a full stop, comma, colon or parentheses as the sentence requires. Connect related ideas without creating long, tangled sentences. Keep headings, labels, identifiers and conventional commit subjects brief where their format calls for it. Preserve exact quotations, commands and code syntax."
+    },
+    {
+      "topic": "jmylchreest-writing-concision",
+      "decision": "Keep writing succinct while preserving the meaning and context the reader needs.",
+      "rationale": "Concise writing saves attention when it removes repetition without hiding useful information.",
+      "details": "Prefer specific verbs and concrete examples to vague qualifiers. Remove filler, repeated summaries and unnecessary background. Give each paragraph one clear purpose. Use lists when they make steps or parallel items easier to scan. Do not shorten explanations into fragments or omit relevant limitations just to reduce word count."
+    },
+    {
+      "topic": "jmylchreest-writing-change-notes",
+      "decision": "Explain the concrete change and its reason in commit messages and change notes.",
+      "rationale": "Useful change history lets a future reader understand what happened and why without replaying the development session.",
+      "details": "Use a short, informative commit subject that follows the repository convention. Add complete sentences in the body when the reason, resulting behaviour, validation or a limitation needs explanation. Describe the final change rather than the chronology of edits. Mention checks only when they were actually run. Avoid generic claims such as \"improve robustness\" without explaining the improvement."
+    },
+    {
+      "topic": "jmylchreest-writing-comments",
+      "decision": "Write comments that explain intent, constraints or surprising behaviour.",
+      "rationale": "Comments are most useful when they preserve information that the code alone cannot convey.",
+      "details": "Use concise, complete sentences for explanatory comments and docstrings. Avoid narrating obvious code or adding boilerplate commentary. Keep comments accurate when behaviour changes. Follow required documentation formats and preserve machine-readable directives."
+    }
+  ]
+}
