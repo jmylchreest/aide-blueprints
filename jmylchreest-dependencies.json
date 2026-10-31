@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "name": "jmylchreest-dependencies",
+  "display_name": "John Mylchreest dependency upgrade preferences",
+  "description": "Instructions for reviewing upstream migration guidance and validating dependency upgrade impacts.",
+  "version": "0.1.0",
+  "tags": [
+    "personal",
+    "dependencies",
+    "maintenance"
+  ],
+  "decisions": [
+    {
+      "topic": "jmylchreest-dependency-upgrade-migration-review",
+      "decision": "Before merging any major dependency upgrade, review upstream migration or upgrade guidance and assess its implementation impact. Apply the same requirement to pre-1.0 minor upgrades. Review other minor upgrades when practical, and require it when release notes indicate breaking, security-sensitive, runtime, or default-behaviour changes.",
+      "details": "Apply this process to manual and automated dependency upgrades. Check official migration guides, upgrade documentation, release notes and changelogs for the versions crossed. Identify changes to APIs, feature flags, defaults, runtime or executor selection, security behaviour and platform requirements. Assess their impact on actual call paths and configuration, implement required adjustments, and run focused integration or runtime tests where direct unit tests could miss the impact. Document the impact assessment and validation in the upgrade PR or review, including when no implementation change is required. If upstream provides no guidance, note that and inspect available release notes or source changes; absence of a guide does not block an upgrade by itself. For ordinary minor upgrades, guidance review is recommended unless one of the mandatory conditions applies.",
+      "rationale": "Assess upgrade compatibility beyond successful compilation and existing unit tests; check for behaviour changes that require implementation or validation updates."
+    }
+  ]
+}

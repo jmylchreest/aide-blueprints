@@ -4,6 +4,8 @@ My personal preferences for projects that use [aide](https://github.com/jmylchre
 
 The `jmylchreest-writing` blueprint covers READMEs, documentation, commit messages, pull request descriptions, release notes, code comments and explanations. It favours natural language, complete sentences and succinct meaning. It avoids em dashes, filler and inflated claims.
 
+The `jmylchreest-dependencies` blueprint requires upstream migration guidance review for major and pre-1.0 minor dependency upgrades, with impact assessment and focused validation. Review is recommended for other minor upgrades and required when release notes indicate breaking, security-sensitive, runtime or default-behaviour changes.
+
 ## Import into a project
 
 Run this from the project directory:
@@ -12,7 +14,13 @@ Run this from the project directory:
 aide blueprint import --registry=https://raw.githubusercontent.com/jmylchreest/aide-blueprints/main jmylchreest-writing
 ```
 
-Add `--dry-run` to preview the decisions. This blueprint complements the standard blueprints shipped with aide and uses distinct decision topics.
+To import the dependency upgrade instructions, run:
+
+```sh
+aide blueprint import --registry=https://raw.githubusercontent.com/jmylchreest/aide-blueprints/main jmylchreest-dependencies
+```
+
+Add `--dry-run` to preview the decisions. These blueprints complement the standard blueprints shipped with aide and uses distinct decision topics.
 
 ## Configure the registry
 
@@ -34,6 +42,6 @@ Registering a source does not automatically import its decisions. Import the blu
 
 ## Update preferences
 
-Edit `jmylchreest-writing.json`, increase its semantic version and commit the change. Run the import command again in each project to apply updates. Aide preserves decisions set by the user or another blueprint unless you explicitly pass `--force`.
+Edit the relevant blueprint JSON file, increase its semantic version and commit the change. Run the import command again in each project to apply updates. Aide preserves decisions set by the user or another blueprint unless you explicitly pass `--force`.
 
 Blueprints use aide's [blueprint schema](https://github.com/jmylchreest/aide/blob/main/docs/docs/features/blueprints.md). Keep new personal blueprint names and decision topics distinct from those shipped upstream.
